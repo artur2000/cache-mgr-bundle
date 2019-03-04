@@ -15,6 +15,7 @@
     "require": {
         "php": ">=7.0.0",
         "predis/predis": "^1.0",
+        "snc/redis-bundle": "^2.1",
         "friendsofsymfony/user-bundle": "dev-master#ee76c57c6a0966c24",
         "symfony/framework-bundle": "^2.8.45|^3.0|^4.0"
     },

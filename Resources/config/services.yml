@@ -10,8 +10,8 @@ services:
 
   clownfish_cache_mgr.cache_key_manager:
     class: Clownfish\CacheMgrBundle\Cache\IdentifierManager
-    arguments: [@doctrine.orm.entity_manager, @security.token_storage]
+    arguments: ['@doctrine.orm.entity_manager', '@security.token_storage']
 
   clownfish_cache_mgr.http:
     class: Clownfish\CacheMgrBundle\Adapter\Http
-    arguments: [@kernel]
+    arguments: ['@kernel']

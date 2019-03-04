@@ -53,7 +53,7 @@ class ClownfishCacheMgrExtension extends Extension implements PrependExtensionIn
          * define a service for our proxies / adapters.
          */
         $sncRedisConfig = $container->getExtensionConfig('snc_redis');
-        foreach ($sncRedisConfig[0]['clients'] as $client) {
+        foreach ((array) $sncRedisConfig[0]['clients'] as $client) {
 
             // add a new "app.number_generatoclownfish_cache_mgr.redis.%s" definitions
             $serviceId = sprintf('clownfish_cache_mgr.redis.%s', $client['alias']);
