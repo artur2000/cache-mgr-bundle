@@ -1,6 +1,6 @@
 <?php
 
-namespace Clownfish\Bundle\CacheMgrBundle\Entity;
+namespace Clownfish\CacheMgrBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Eventus\MainBundle\Model\CacheGeocode as BaseEntity;

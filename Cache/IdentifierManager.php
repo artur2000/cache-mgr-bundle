@@ -6,9 +6,9 @@
  * Time: 01:32
  */
 
-namespace Clownfish\Bundle\CacheMgrBundle\Cache;
+namespace Clownfish\CacheMgrBundle\Cache;
 
-use Clownfish\Bundle\CacheMgrBundle\Entity\CacheIdentifier;
+use Clownfish\CacheMgrBundle\Entity\CacheIdentifier;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Event\OnFlushEventArgs;
 use \Exception;
@@ -18,7 +18,7 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
 /**
  * Class IdentifierManager
  *
- * @package Clownfish\Bundle\CacheMgrBundle\Cache
+ * @package Clownfish\CacheMgrBundle\Cache
  * @author Artur Cichosz - <ac@clownfishweb.pl>
  */
 class IdentifierManager {
@@ -36,7 +36,7 @@ class IdentifierManager {
 	private $tokenStorage = null;
 
 	/**
-	 * @var \Clownfish\Bundle\CacheMgrBundle\Model\CacheIdentifierRepository|null
+	 * @var \Clownfish\CacheMgrBundle\Model\CacheIdentifierRepository|null
 	 */
 	private $repository = null;
 
@@ -83,7 +83,7 @@ class IdentifierManager {
 		$label = str_replace(':','-',$label);
 		$redisKey = $this->createRedisKey($label, $chash);
 
-		/** @var \Clownfish\Bundle\CacheMgrBundle\Entity\CacheIdentifier $existingKey */
+		/** @var \Clownfish\CacheMgrBundle\Entity\CacheIdentifier $existingKey */
 		$existingKey = $this->repository->findByChash($chash, $this);
 		if ($existingKey) {
 			$age = time() - $existingKey->getTimestamp();
@@ -151,7 +151,7 @@ class IdentifierManager {
 
 		$redisKeys = array();
 		$results = $this->repository->findByTagsAnd($tags, $this);
-		/** @var \Clownfish\Bundle\CacheMgrBundle\Entity\CacheIdentifier $result */
+		/** @var \Clownfish\CacheMgrBundle\Entity\CacheIdentifier $result */
 		foreach ($results as $result) {
 			$redisKeys[] = $this->createRedisKey(null, null, $result);
 		}
@@ -169,7 +169,7 @@ class IdentifierManager {
 
 		$redisKeys = array();
 		$results = $this->repository->findByTagsOr($tags, $this);
-		/** @var \Clownfish\Bundle\CacheMgrBundle\Entity\CacheIdentifier $result */
+		/** @var \Clownfish\CacheMgrBundle\Entity\CacheIdentifier $result */
 		foreach ($results as $result) {
 			$redisKeys[] = $this->createRedisKey(null, null, $result);
 		}

@@ -1,6 +1,6 @@
 <?php
 
-namespace Clownfish\Bundle\CacheMgrBundle\Adapter;
+namespace Clownfish\CacheMgrBundle\Adapter;
 
 /**
  * An adapter for the direct redis cache access in

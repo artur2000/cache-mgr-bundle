@@ -6,7 +6,7 @@
  * Time: 01:32
  */
 
-namespace Clownfish\Bundle\CacheMgrBundle\Cache;
+namespace Clownfish\CacheMgrBundle\Cache;
 
 use Doctrine\ORM\Event\OnFlushEventArgs;
 use \Exception;
@@ -14,7 +14,7 @@ use \Exception;
 /**
  * Class CacheInvalidator
  *
- * @package Clownfish\Bundle\CacheMgrBundle\Cache
+ * @package Clownfish\CacheMgrBundle\Cache
  * @author Artur Cichosz - <ac@clownfishweb.pl>
  */
 class CacheInvalidator

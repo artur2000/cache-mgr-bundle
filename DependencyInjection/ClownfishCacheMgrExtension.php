@@ -1,6 +1,6 @@
 <?php
 
-namespace Clownfish\Bundle\CacheMgrBundle\DependencyInjection;
+namespace Clownfish\CacheMgrBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -58,7 +58,7 @@ class ClownfishCacheMgrExtension extends Extension implements PrependExtensionIn
             // add a new "app.number_generatoclownfish_cache_mgr.redis.%s" definitions
             $serviceId = sprintf('clownfish_cache_mgr.redis.%s', $client['alias']);
             $definition = new Definition(
-                'Clownfish\Bundle\CacheMgrBundle\Adapter\Redis',
+                'Clownfish\CacheMgrBundle\Adapter\Redis',
                 array(
                     new Reference(sprintf('snc_redis.%s', $client['alias'])), // a reference to another service
                     new Reference('kernel'), // a reference to another service

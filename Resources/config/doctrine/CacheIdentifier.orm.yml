@@ -1,7 +1,7 @@
-Clownfish\Bundle\CacheMgrBundle\Entity\CacheIdentifier:
+Clownfish\CacheMgrBundle\Entity\CacheIdentifier:
   type: entity
   table: cache_identifier
-  repositoryClass: Clownfish\Bundle\CacheMgrBundle\Model\CacheIdentifierRepository
+  repositoryClass: Clownfish\CacheMgrBundle\Model\CacheIdentifierRepository
   fields:
     identifier:
       id: true

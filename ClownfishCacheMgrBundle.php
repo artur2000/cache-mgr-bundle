@@ -1,6 +1,6 @@
 <?php
 
-namespace Clownfish\Bundle\CacheMgrBundle;
+namespace Clownfish\CacheMgrBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

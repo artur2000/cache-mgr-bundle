@@ -6,7 +6,7 @@
  * Time: 17:47
  */
 
-namespace Clownfish\Bundle\CacheMgrBundle\Adapter;
+namespace Clownfish\CacheMgrBundle\Adapter;
 
 
 use Symfony\Component\HttpFoundation\Response;

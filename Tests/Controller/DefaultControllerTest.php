@@ -1,6 +1,6 @@
 <?php
 
-namespace Clownfish\Bundle\CacheMgrBundle\Tests\Controller;
+namespace Clownfish\CacheMgrBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

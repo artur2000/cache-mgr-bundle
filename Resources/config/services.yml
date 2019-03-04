@@ -3,15 +3,15 @@ parameters:
 services:
 
   clownfish_cache_mgr.cache_invalidator:
-    class: Clownfish\Bundle\CacheMgrBundle\Cache\CacheInvalidator
+    class: Clownfish\CacheMgrBundle\Cache\CacheInvalidator
     arguments: []
     tags:
        - { name: doctrine.event_listener, event: onFlush }
 
   clownfish_cache_mgr.cache_key_manager:
-    class: Clownfish\Bundle\CacheMgrBundle\Cache\IdentifierManager
+    class: Clownfish\CacheMgrBundle\Cache\IdentifierManager
     arguments: [@doctrine.orm.entity_manager, @security.token_storage]
 
   clownfish_cache_mgr.http:
-    class: Clownfish\Bundle\CacheMgrBundle\Adapter\Http
+    class: Clownfish\CacheMgrBundle\Adapter\Http
     arguments: [@kernel]

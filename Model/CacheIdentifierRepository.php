@@ -1,10 +1,10 @@
 <?php
 
-namespace Clownfish\Bundle\CacheMgrBundle\Model;
+namespace Clownfish\CacheMgrBundle\Model;
 
 use Doctrine\ORM\EntityRepository;
-use Clownfish\Bundle\CacheMgrBundle\Cache\IdentifierManager as CacheIdentifierManager;
-use Clownfish\Bundle\CacheMgrBundle\ClownfishCacheMgrBundleCacheIdentifiers;
+use Clownfish\CacheMgrBundle\Cache\IdentifierManager as CacheIdentifierManager;
+use Clownfish\CacheMgrBundle\ClownfishCacheMgrBundleCacheIdentifiers;
 
 /**
  * CacheIdentifierRepository
