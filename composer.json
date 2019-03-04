@@ -1,5 +1,5 @@
 {
-    "name": "artur2000/cache-mgr-bundle",
+    "name": "clownfish/cache-mgr-bundle",
     "type": "symfony-bundle",
     "description": "Small helper to handle http- and redis cache in a symfony app.",
     "keywords": ["symfony", "cache"],
