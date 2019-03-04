@@ -1,0 +1,25 @@
+Clownfish\Bundle\CacheMgrBundle\Entity\CacheIdentifier:
+  type: entity
+  table: cache_identifier
+  repositoryClass: Clownfish\Bundle\CacheMgrBundle\Model\CacheIdentifierRepository
+  fields:
+    identifier:
+      id: true
+      type: string
+      generator:
+        strategy: NONE
+    tags:
+      type: string
+      nullable: true
+    label:
+      type: string
+      nullable: false
+    backend:
+      type: string
+      nullable: false
+    timestamp:
+      type: integer
+      nullable: false
+    lifetime:
+      type: integer
+      nullable: false
