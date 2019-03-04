@@ -15,7 +15,7 @@ use \Exception;
  * Class CacheInvalidator
  *
  * @package Clownfish\Bundle\CacheMgrBundle\Cache
- * @author Artur Cichosz - <artur2000@gmx.de>
+ * @author Artur Cichosz - <ac@clownfishweb.pl>
  */
 class CacheInvalidator
 {

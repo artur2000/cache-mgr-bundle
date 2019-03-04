@@ -1,0 +1,35 @@
+{
+    "name": "clownfish/cache-mgr-bundle",
+    "type": "symfony-bundle",
+    "description": "Small helper to handle http- and redis cache in a symfony app.",
+    "keywords": ["symfony", "cache"],
+    "homepage": "https://github.com/artur2000/cache-mgr-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Artur Cichosz",
+            "email": "ac@clownfishweb.pl",
+            "homepage": "http://www.clownfishweb.pl"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "predis/predis": "^1.0",
+        "friendsofsymfony/user-bundle": "dev-master#ee76c57c6a0966c24",
+        "symfony/framework-bundle": "^2.8.45|^3.0|^4.0"
+    },
+    "require-dev": {
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Clownfish\\CacheMgrBundle\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
