@@ -3,13 +3,12 @@
 namespace Clownfish\CacheMgrBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Eventus\MainBundle\Model\CacheGeocode as BaseEntity;
 
 
 /**
  * CacheIdentifier
  */
-class CacheIdentifier extends BaseEntity
+class CacheIdentifier
 {
 
     /**
