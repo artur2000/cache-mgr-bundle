@@ -47,6 +47,14 @@ class Redis
     }
 
     /**
+     * @param int|array $cacheKeys
+     * @return int
+     */
+    public function del($cacheKeys) {
+        return $this->redisClient->del(is_array($cacheKeys) ? $cacheKeys : [$cacheKeys]);
+    }
+    
+    /**
      * @param $cacheKey
      * @param $expirationAge
      */
