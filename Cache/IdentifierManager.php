@@ -14,6 +14,7 @@ use Doctrine\ORM\Event\OnFlushEventArgs;
 use \Exception;
 use FOS\UserBundle\Model\User;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Class IdentifierManager
@@ -118,7 +119,7 @@ class IdentifierManager {
 			$user = $this->tokenStorage->getToken()->getUser();
 		}
 
-		if (!$user) {
+		if (! ($user instanceof UserInterface)) {
 			throw new \Exception('A user bound cache identifier can only be registered in context of a valid user session.');
 		}
 
