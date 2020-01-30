@@ -16,7 +16,7 @@
         "php": ">=7.2.0",
         "predis/predis": "^1.1",
         "snc/redis-bundle": "^3.1",
-        "friendsofsymfony/user-bundle": "dev-master#ee76c57c6a0966c24",
+        "friendsofsymfony/user-bundle": "dev-master#a9e71b6e7b61e7f",
         "symfony/framework-bundle": "^2.8.45|^3.0|^4.0"
     },
     "require-dev": {
@@ -30,7 +30,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.1-dev"
+            "dev-master": "1.2-dev"
         }
     }
 }
