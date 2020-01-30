@@ -13,7 +13,7 @@ use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Event\OnFlushEventArgs;
 use \Exception;
 use FOS\UserBundle\Model\User;
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -32,7 +32,7 @@ class IdentifierManager {
 	private $entityManager = null;
 
 	/**
-	 * @var TokenStorage|null
+	 * @var TokenStorageInterface|null
 	 */
 	private $tokenStorage = null;
 
@@ -43,9 +43,9 @@ class IdentifierManager {
 
 	/**
 	 * @param EntityManager $entityManager
-	 * @param TokenStorage $tokenStorage
+	 * @param TokenStorageInterface $tokenStorage
 	 */
-	public function __construct(EntityManager $entityManager, TokenStorage $tokenStorage)
+	public function __construct(EntityManager $entityManager, TokenStorageInterface $tokenStorage)
 	{
 		$this->entityManager = $entityManager;
 		$this->tokenStorage = $tokenStorage;
