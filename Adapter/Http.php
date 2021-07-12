@@ -86,6 +86,16 @@ class Http
      */
     public function setOptions(Response $response, $options = array('max-age'=>3600, 'shared-max-age'=>3600, 'must-revalidate'=>true)) {
 
+        if (!array_key_exists('max-age',  $options)) {
+            $options['max-age'] = 3600;
+        }
+        if (!array_key_exists('shared-max-age',  $options)) {
+            $options['shared-max-age'] = 3600;
+        }
+        if (!array_key_exists('must-revalidate',  $options)) {
+            $options['must-revalidate'] = true;
+        }
+
         $expirationTime = new \DateTime();
         $expirationTime->modify('+' . $options['max-age'] . ' seconds');
 
