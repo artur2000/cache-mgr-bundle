@@ -13,11 +13,10 @@
         }
     ],
     "require": {
-        "php": ">=7.2.0",
-        "predis/predis": "^1.1",
-        "snc/redis-bundle": "^3.1",
-        "friendsofsymfony/user-bundle": "dev-master#a9e71b6e7b61e7f",
-        "symfony/framework-bundle": "^2.8.45|^3.0|^4.0"
+        "php": ">=8.1.0",
+        "predis/predis": "^2.2",
+        "snc/redis-bundle": "^4.7",
+        "symfony/framework-bundle": "6.0"
     },
     "require-dev": {
     },
@@ -30,7 +29,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.2-dev"
+            "dev-master": "2.0-dev"
         }
     }
 }
