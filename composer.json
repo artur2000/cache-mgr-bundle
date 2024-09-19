@@ -16,7 +16,7 @@
         "php": ">=8.1.0",
         "predis/predis": "^2.2",
         "snc/redis-bundle": "^4.7",
-        "symfony/framework-bundle": "6.0"
+        "symfony/framework-bundle": "^6.0"
     },
     "require-dev": {
     },
